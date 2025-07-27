@@ -1,19 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" href="/wcms/wex/static/css/main.css"> -->
-  <title>Help page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebStudio - Build Your Digital Future</title>
+    <meta name="description" content="We craft modern landing pages, Python-powered web apps, and Telegram bots tailored to your vision. Transform your ideas into reality.">
+    <meta name="keywords" content="landing pages, web apps, python development, telegram bots, web studio, modern design">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="WebStudio - Build Your Digital Future">
+    <meta property="og:description" content="We craft modern landing pages, Python-powered web apps, and Telegram bots tailored to your vision.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="neon-spinner"></div>
+            <p>Loading Experience...</p>
+        </div>
+    </div>
 
-<div id="help">
-  <h1>Help gonna be here</h1>
-</div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Web<span class="neon-text">Studio</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<!-- WARRING '/' -->
-<!-- <script src="/wcms/wex/static/js/main.js"></script> -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Build Your Digital Future with 
+                    <span class="gradient-text">Stunning Landing Pages & Apps</span>
+                </h1>
+                <p class="hero-subtitle">
+                    We craft modern landing pages, Python-powered web apps, and Telegram bots tailored to your vision.
+                </p>
+                <div class="hero-buttons">
+                    <button class="cta-button primary" onclick="scrollToSection('contact')">
+                        <span>Get Started Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="cta-button secondary" onclick="scrollToSection('portfolio')">
+                        <span>View Portfolio</span>
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="mockup-container">
+                    <div class="device-mockup">
+                        <div class="screen">
+                            <div class="mockup-content">
+                                <div class="mockup-header"></div>
+                                <div class="mockup-body">
+                                    <div class="mockup-element"></div>
+                                    <div class="mockup-element"></div>
+                                    <div class="mockup-element wide"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="neon-text">Services</span></h2>
+                <p class="section-subtitle">Transforming ideas into digital reality with cutting-edge technology</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Pixel-perfect, conversion-driven designs that captivate your audience and drive results.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Responsive Design</span>
+                        <span class="feature-tag">High Conversion</span>
+                        <span class="feature-tag">Fast Loading</span>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Applications</h3>
+                    <p>Scalable, user-friendly applications built with modern frameworks and best practices.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">React/Vue</span>
+                        <span class="feature-tag">Scalable</span>
+                        <span class="feature-tag">Modern UI/UX</span>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Applications</h3>
+                    <p>Custom solutions leveraging Python's versatility for web backends, APIs, and automation.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Django/Flask</span>
+                        <span class="feature-tag">APIs</span>
+                        <span class="feature-tag">Automation</span>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram Bots</h3>
+                    <p>Automated, interactive bots for business engagement, customer support, and process automation.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">AI Integration</span>
+                        <span class="feature-tag">24/7 Support</span>
+                        <span class="feature-tag">Custom Logic</span>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="neon-text">Portfolio</span></h2>
+                <p class="section-subtitle">Showcasing our latest projects and digital innovations</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>E-Commerce Landing Page</h3>
+                                <p>Modern landing page with 40% conversion increase</p>
+                                <div class="tech-stack">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Task Management App</h3>
+                                <p>Full-stack web application with real-time updates</p>
+                                <div class="tech-stack">
+                                    <span>React</span>
+                                    <span>Python</span>
+                                    <span>Django</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Customer Support Bot</h3>
+                                <p>AI-powered Telegram bot handling 1000+ queries daily</p>
+                                <div class="tech-stack">
+                                    <span>Python</span>
+                                    <span>Telegram API</span>
+                                    <span>AI/ML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Analytics Dashboard</h3>
+                                <p>Real-time data visualization platform</p>
+                                <div class="tech-stack">
+                                    <span>Vue.js</span>
+                                    <span>Python</span>
+                                    <span>Flask</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose <span class="neon-text">Us</span></h2>
+                <p class="section-subtitle">Experience excellence with our cutting-edge approach</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Cutting-Edge Technology</h3>
+                    <p>Tailored solutions with the latest frameworks and technologies to keep you ahead of the competition.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Rapid Delivery</h3>
+                    <p>Fast turnaround times without compromising on quality, getting your project live quickly.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock support for all your digital needs, ensuring your success is our priority.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Results-Driven</h3>
+                    <p>Focus on measurable outcomes and ROI, delivering solutions that drive real business growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client <span class="neon-text">Testimonials</span></h2>
+                <p class="section-subtitle">What our clients say about working with us</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"WebStudio transformed our online presence with a stunning landing page that increased our conversions by 40%. Their attention to detail and modern design approach exceeded our expectations."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <span>CEO, TechStart Inc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"The Telegram bot they developed for our customer support handles over 1000 queries daily with impressive accuracy. The automation has saved us countless hours and improved customer satisfaction."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Michael Chen</h4>
+                                    <span>CTO, Digital Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Their Python web application development skills are outstanding. They delivered a scalable, robust platform that perfectly meets our business needs. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Emily Rodriguez</h4>
+                                    <span>Founder, DataFlow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="nav-dot active" onclick="showTestimonial(0)"></button>
+                    <button class="nav-dot" onclick="showTestimonial(1)"></button>
+                    <button class="nav-dot" onclick="showTestimonial(2)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interactive <span class="neon-text">Demo</span></h2>
+                <p class="section-subtitle">Experience our work firsthand with this mini Telegram bot demo</p>
+            </div>
+
+            <div class="demo-container">
+                <div class="chat-interface">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="chat-info">
+                            <h4>WebStudio Bot</h4>
+                            <span class="online-status">Online</span>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                <p>👋 Hello! I'm a demo bot created by WebStudio. Try asking me about our services!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="handleChatInput(event)">
+                        <button onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Build Something <span class="neon-text">Extraordinary</span> Together!</h2>
+                <p class="section-subtitle">Ready to transform your ideas into digital reality? Get in touch with us today.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>hello@webstudio.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Free Consultation</h3>
+                            <button class="consultation-btn" onclick="openConsultationModal()">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select Project Type</option>
+                            <option value="landing-page">Landing Page</option>
+                            <option value="web-app">Web Application</option>
+                            <option value="python-app">Python Application</option>
+                            <option value="telegram-bot">Telegram Bot</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="projectType">Project Type</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Project Details</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Web<span class="neon-text">Studio</span></h3>
+                        <p>Crafting digital experiences that drive results and inspire innovation.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Landing Pages</a></li>
+                        <li><a href="#services">Web Applications</a></li>
+                        <li><a href="#services">Python Development</a></li>
+                        <li><a href="#services">Telegram Bots</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-envelope"></i> hello@webstudio.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Digital Innovation Hub</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 WebStudio. All rights reserved. | Crafted with ❤️ for digital innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Consultation Modal -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Book Free Consultation</h3>
+                <button class="close-modal" onclick="closeConsultationModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Schedule a free 30-minute consultation to discuss your project and explore how we can help bring your vision to life.</p>
+                <form class="consultation-form" onsubmit="handleConsultationSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" id="consultName" name="name" required>
+                        <label for="consultName">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="consultEmail" name="email" required>
+                        <label for="consultEmail">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="consultPhone" name="phone">
+                        <label for="consultPhone">Phone Number (Optional)</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="consultTime" name="preferredTime" required>
+                            <option value="">Select Preferred Time</option>
+                            <option value="morning">Morning (9AM - 12PM)</option>
+                            <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                            <option value="evening">Evening (5PM - 8PM)</option>
+                        </select>
+                        <label for="consultTime">Preferred Time</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Book Consultation</span>
+                        <i class="fas fa-calendar-check"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Message Sent Successfully!</h3>
+            <p>We'll get back to you within 24 hours.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
